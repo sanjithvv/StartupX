@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - StartupX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Startup<span>X</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus fugiat provident quaerat a nostrum velit dolorem!</p>
+
+        <form onsubmit="return validateForm()">
+            <label for = "name">Name:</label>
+            <input type = "text" id="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for = "message">Message:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <button type = "submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> &copy; 2025 StartupX | Let&apos;s Build Something Great</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            if (name === "" || email === "") {
+                alert("Please fill all fields before submitting.");
+                return false;
+            }
+            alert("Thank you for reaching out!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
