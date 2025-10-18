@@ -24,24 +24,24 @@ header {
 .logo span {
     color: #ffcc00;
 }
-
 nav ul {
     list-style:none;
     margin:0;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
     margin:0 12px;
 }
-
 nav a {
     color: white;
     text-decoration: none;
     font-weight:500;
 }
 
+nav a:hover{
+    border-bottom:2px solid #ffcc00;
+}
 nav a.active {
     border-bottom:2px solid #ffcc00;
 }
@@ -76,7 +76,6 @@ nav a.active {
     padding: 50px 20px;
     text-align:center;
 }
-
 .service-container {
     display: flex;
     justify-content:center;
@@ -92,11 +91,9 @@ nav a.active {
     width: 280px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
-
 .service-box h3, .service-card h3 {
     color: #0b3d91;
 }
-
 /* Abiot page */
 .about {
     padding:50px 30px;
@@ -137,14 +134,12 @@ label {
     margin: 5px 0;
     text-align:left;
 }
-
 input, textarea {
     padding:8px;
     border:1px solid #bbb;
     margin-bottom: 10px;
     font-family:inherit;
 }
-
 button {
     background-color: #0b3d91;
     color: white;
@@ -161,3 +156,4 @@ footer {
     padding: 15px;
     margin-top: 30px;
 }
+
