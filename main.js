@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.page-section');
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
+
     window.showPage = function(pageId) {
         sections.forEach(section => {
             section.classList.remove('active');
@@ -26,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.style.display = 'none';
         }
     }
+    
     window.showPage('home');
+
     mobileMenuButton.addEventListener('click', () => {
         if (mobileMenu.style.display === 'block') {
             mobileMenu.style.display = 'none';
@@ -34,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.style.display = 'block';
         }
     });
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -41,11 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
             window.showPage(pageId);
         });
     });
+
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        
         formStatus.textContent = 'Thank you for your inquiry! We have received your message and will be in touch shortly.';
         formStatus.style.display = 'block';
+        
         contactForm.reset();
+
         setTimeout(() => {
             formStatus.style.display = 'none';
         }, 5000);
