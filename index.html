@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StartupX - Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartupX — Empowering Startups</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">Startup<span>X</span></h1>
+      <div class="nav-right">
+        <button id="themeToggle" class="btn-small">🌙</button>
+        <button class="menu-btn">☰</button>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">Startup<span>X</span></div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section id="hero">
+    <div class="container hero-content">
+      <h2>Empowering Startups to <span id="typed-text"></span></h2>
+      <p>We help you transform your ideas into powerful digital products and grow your brand globally.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Innovate. Create. Grow.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button onclick="learnMore()">Learn More</button>
-        </div>
-    </section>
+  <section id="about" class="container fade-section">
+    <h3>About Us</h3>
+    <p>
+      At <strong>StartupX</strong>, we’re passionate about helping entrepreneurs succeed. 
+      Our mission is to provide innovative solutions — from web development to growth marketing — 
+      empowering startups to stand out in today’s competitive landscape.
+    </p>
+  </section>
 
-    <!-- Services Preview -->
-    <section class="services-preview">
-        <h2>What We Do</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>Lorem, ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, animi?</p>
-            </div>
-            <div class="service-box">
-                <h3>Lorem, ipsum</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus!</p>
-            </div>
-            <div class="service-box">
-                <h3>Lorem, ipsum</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem!</p>
-            </div>
-        </div>
-    </section>
+  <section id="services" class="container fade-section">
+    <h3>Our Services</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Web Development</h4>
+        <p>We create fast, modern, and responsive websites tailored to your brand.</p>
+      </div>
+      <div class="card">
+        <h4>Brand Strategy</h4>
+        <p>Build a unique and recognizable brand identity that connects with your audience.</p>
+      </div>
+      <div class="card">
+        <h4>Growth Marketing</h4>
+        <p>Boost your visibility with data-driven digital marketing and SEO campaigns.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 StartupX | Empowering the Future</p>
-    </footer>
+  <section id="contact" class="container fade-section">
+    <h3>Contact Us</h3>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" />
+      <input type="email" id="email" name="email" placeholder="Your Email" />
+      <textarea id="message" name="message" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
 
-    <script>
-        function learnMore() {
-            alert("Visit our About page to learn more about StartupX!");
-        }
-    </script>
+  <footer>
+    <div class="container">
+      <p>© 2025 StartupX. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <button id="toTop" title="Back to top">↑</button>
+  <script src="main.js"></script>
 </body>
 </html>
-
