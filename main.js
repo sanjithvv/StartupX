@@ -1,4 +1,4 @@
-// ---------- Smooth Scroll ----------
+// Smooth scrol
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -9,12 +9,12 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ---------- Mobile Menu ----------
+// Mobile menu
 const menuBtn = document.querySelector('.menu-btn');
 const navList = document.querySelector('nav ul');
 menuBtn.addEventListener('click', () => navList.classList.toggle('nav-open'));
 
-// ---------- Back To Top ----------
+// to the top
 const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) toTop.classList.add('show');
@@ -22,14 +22,14 @@ window.addEventListener('scroll', () => {
 });
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// ---------- Dark / Light Mode ----------
+// dark and light lmode
 const themeToggle = document.getElementById('themeToggle');
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// ---------- Typing Effect ----------
+// typing effect
 const words = ["Innovate.", "Grow.", "Succeed."];
 let i = 0, j = 0, currentWord = "", isDeleting = false;
 const typed = document.getElementById("typed-text");
@@ -54,19 +54,8 @@ function typeEffect() {
 }
 typeEffect();
 
-// ---------- Fade-In on Scroll ----------
-const fadeSections = document.querySelectorAll(".fade-section");
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.85;
-  fadeSections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < triggerBottom) sec.classList.add("visible");
-  });
-}
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
 
-// ---------- Highlight Services on Scroll ----------
+// highlight services on scroll
 const serviceCards = document.querySelectorAll("#services .card");
 window.addEventListener("scroll", () => {
   serviceCards.forEach(card => {
@@ -76,7 +65,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ---------- Form Validation + Feedback ----------
+// form validation
 const form = document.getElementById("contactForm");
 const statusMsg = document.getElementById("formStatus");
 
@@ -95,3 +84,4 @@ form.addEventListener("submit", e => {
     form.reset();
   }
 });
+
