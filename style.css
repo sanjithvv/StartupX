@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #4F46E5; 
+    --color-primary: #4F46E5;
     --color-secondary: #8B5CF6;
     --color-text-dark: #1F2937;
     --color-text-medium: #4B5563;
@@ -8,6 +8,7 @@
     --font-family-sans: 'Inter', sans-serif;
     --max-width: 1280px;
 }
+
 body {
     font-family: var(--font-family-sans);
     margin: 0;
@@ -17,13 +18,14 @@ body {
     line-height: 1.6;
 }
 
-
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 1rem;
 }
+
 a { text-decoration: none; }
+
 .btn {
     padding: 0.75rem 2rem;
     font-size: 1rem;
@@ -46,6 +48,7 @@ a { text-decoration: none; }
     transform: translateY(-2px);
     box-shadow: 0 8px 10px rgba(79, 70, 229, 0.4);
 }
+
 .btn-secondary {
     background-color: var(--color-card-bg);
     color: var(--color-primary);
@@ -57,6 +60,7 @@ a { text-decoration: none; }
     color: white;
     transform: translateY(-2px);
 }
+
 header {
     background-color: var(--color-card-bg);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -64,7 +68,6 @@ header {
     top: 0;
     z-index: 100;
 }
-
 
 nav {
     display: flex;
@@ -78,6 +81,7 @@ nav {
     font-weight: 800;
     color: var(--color-primary);
 }
+
 .nav-links {
     display: none;
 }
@@ -90,17 +94,9 @@ nav {
     border-bottom: 2px solid transparent;
 }
 
-
 .nav-links a:hover, .nav-links a.active {
     color: var(--color-primary);
     border-bottom-color: var(--color-primary);
-}
-
-#mobile-menu {
-    display: none;
-    background-color: var(--color-card-bg);
-    border-top: 1px solid #E5E7EB;
-    padding-bottom: 0.5rem;
 }
 
 .mobile-menu-button {
@@ -110,6 +106,13 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     display: block;
+}
+
+#mobile-menu {
+    display: none;
+    background-color: var(--color-card-bg);
+    border-top: 1px solid #E5E7EB;
+    padding-bottom: 0.5rem;
 }
 
 #mobile-menu a {
@@ -124,6 +127,7 @@ nav {
     background-color: var(--color-bg-light);
     color: var(--color-primary);
 }
+
 .page-section {
     padding: 5rem 0;
     min-height: 80vh;
@@ -131,6 +135,7 @@ nav {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+
 .page-section.active {
     display: block;
     opacity: 1;
@@ -143,12 +148,12 @@ h2 {
     color: var(--color-text-dark);
     margin-bottom: 1.5rem;
 }
+
 #home {
     text-align: center;
     padding: 8rem 0;
     background: linear-gradient(180deg, var(--color-card-bg), var(--color-bg-light));
 }
-
 
 #home h1 {
     font-size: 4rem;
@@ -173,12 +178,14 @@ h2 {
     justify-content: center;
     gap: 1.5rem;
 }
+
 .features-grid, .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
+
 .feature-card, .service-card {
     background-color: var(--color-card-bg);
     padding: 2rem;
@@ -193,7 +200,6 @@ h2 {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .feature-card h3, .service-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -205,7 +211,7 @@ h2 {
 .feature-card p, .service-card p {
     color: var(--color-text-medium);
 }
-/*team section*/
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -253,10 +259,9 @@ h2 {
 .team-member p.bio {
     font-size: 0.9rem;
     color: var(--color-text-medium);
-    min-height: 4.5rem; 
+    min-height: 4.5rem;
 }
 
-/* contact section */
 #contact {
     background-color: #FFFFFF;
     border-radius: 1rem;
@@ -273,9 +278,11 @@ h2 {
 .contact-content {
     padding: 2rem;
 }
+
 #contact-form {
     padding: 1rem 0;
 }
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -286,6 +293,7 @@ h2 {
     font-weight: 600;
     color: var(--color-text-dark);
 }
+
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 0.75rem;
@@ -300,25 +308,25 @@ h2 {
     outline: none;
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
+
 #form-status {
     margin-top: 1.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #D1FAE5;
-    color: #065F46; 
+    color: #065F46;
     text-align: center;
     font-weight: 600;
     display: none;
 }
 
-/* footer*/
 footer {
     background-color: var(--color-text-dark);
     color: #D1D5DB;
     text-align: center;
     padding: 2rem 0;
 }
-/* media queries*/
+
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
@@ -340,4 +348,3 @@ footer {
         gap: 1rem;
     }
 }
-
