@@ -8,203 +8,193 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+      <div class="container">
+          <nav>
+              <a href="#" class="logo">StartupX</a>
 
-    <!-- Header and Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">StartupX</a>
+              <div class="nav-links" id="desktop-nav">
+                  <a href="#" data-page="home" class="active">Home</a>
+                  <a href="#" data-page="services">Services</a>
+                  <a href="#" data-page="features">Features</a>
+                  <a href="#" data-page="team">Team</a>
+                  <a href="#" data-page="contact">Contact Us</a>
+              </div>
 
-                <div class="nav-links" id="desktop-nav">
-                    <a href="#" data-page="home" class="active">Home</a>
-                    <a href="#" data-page="services">Services</a>
-                    <a href="#" data-page="features">Features</a>
-                    <a href="#" data-page="team">Team</a>
-                    <a href="#" data-page="contact">Contact Us</a>
-                </div>
+              <button class="mobile-menu-button" id="menu-toggle-button">&#9776;</button>
+          </nav>
+      </div>
+      
+      <div id="mobile-menu">
+          <a href="#" data-page="home">Home</a>
+          <a href="#" data-page="services">Services</a>
+          <a href="#" data-page="features">Features</a>
+          <a href="#" data-page="team">Team</a>
+          <a href="#" data-page="contact">Contact Us</a>
+      </div>
+  </header>
 
-                <button class="mobile-menu-button" id="menu-toggle-button">&#9776;</button>
-            </nav>
-        </div>
-        
-        <!-- Mobile Dropdown Menu (UPDATED) -->
-        <div id="mobile-menu">
-            <a href="#" data-page="home">Home</a>
-            <a href="#" data-page="services">Services</a>
-            <a href="#" data-page="features">Features</a>
-            <a href="#" data-page="team">Team</a>
-            <a href="#" data-page="contact">Contact Us</a>
-        </div>
-    </header>
+  <main class="container">
 
-    <main class="container">
+      <section id="home" class="page-section active">
+          <h1>
+              Accelerate Your <span class="highlight">Growth</span>
+          </h1>
+          <p>
+              StartupX is the next generation platform built for **scale, performance, and simplicity**. We provide the tools you need to innovate faster than ever before.
+          </p>
+          <div class="hero-actions">
+              <button class="btn btn-primary" onclick="showPage('features')">
+                  Explore Features
+              </button>
+              <button class="btn btn-secondary" onclick="showPage('contact')">
+                  Get Started Now
+              </button>
+          </div>
+      </section>
+      
+      <section id="services" class="page-section">
+          <h2>Our Service Offerings</h2>
+          <p style="text-align: center; color: var(--color-text-medium); max-width: 800px; margin: 0 auto 3rem auto;">
+              We offer end-to-end consulting and implementation services tailored to modern enterprise needs, focusing on digital transformation and efficiency.
+          </p>
+          
+          <div class="services-grid">
+              <div class="service-card">
+                  <h3>Digital Transformation</h3>
+                  <p>Modernizing legacy systems and processes to achieve superior operational efficiency and a better customer experience.</p>
+              </div>
+              
+              <div class="service-card">
+                  <h3>Cloud Migration & DevOps</h3>
+                  <p>Seamlessly move your infrastructure to the cloud (AWS, Azure, GCP) and implement cutting-edge CI/CD pipelines.</p>
+              </div>
+              
+              <div class="service-card">
+                  <h3>Custom Software Solutions</h3>
+                  <p>Building bespoke applications designed specifically to solve your unique business challenges, from mobile to enterprise scale.</p>
+              </div>
+              
+              <div class="service-card">
+                  <h3>UX/UI & Product Design</h3>
+                  <p>Crafting intuitive and engaging user experiences based on deep user research and modern design principles.</p>
+              </div>
+          </div>
+      </section>
 
-        <!-- home section -->
-        <section id="home" class="page-section active">
-            <h1>
-                Accelerate Your <span class="highlight">Growth</span>
-            </h1>
-            <p>
-                StartupX is the next generation platform built for scale, performance, and simplicity. We provide the tools you need to innovate faster than ever before.
-            </p>
-            <div class="hero-actions">
-                <button class="btn btn-primary" onclick="showPage('features')">
-                    Explore Features
-                </button>
-                <button class="btn btn-secondary" onclick="showPage('contact')">
-                    Get Started Now
-                </button>
-            </div>
-        </section>
-        
-        <!--Services section -->
-        <section id="services" class="page-section">
-            <h2>Our Service Offerings</h2>
-            <p style="text-align: center; color: var(--color-text-medium); max-width: 800px; margin: 0 auto 3rem auto;">
-                We offer end-to-end consulting and implementation services tailored to modern enterprise needs, focusing on digital transformation and efficiency.
-            </p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Digital Transformation</h3>
-                    <p>Modernizing legacy systems and processes to achieve superior operational efficiency and a better customer experience.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Cloud Migration & DevOps</h3>
-                    <p>Seamlessly move your infrastructure to the cloud (AWS, Azure, GCP) and implement cutting-edge CI/CD pipelines.</p>
-                </div>
+      <section id="features" class="page-section">
+          <h2>Core Platform Features</h2>
+          
+          <div class="features-grid">
+              <div class="feature-card">
+                  <h3>Cloud Scalability</h3>
+                  <p>Built on resilient cloud architecture designed to handle massive traffic spikes and data loads without breaking a sweat. Automatic scaling is standard.</p>
+              </div>
+              
+              <div class="feature-card">
+                  <h3>Real-time AI Insights</h3>
+                  <p>Integrate our proprietary AI engine to generate actionable insights from your data, predicting trends and optimizing performance instantly.</p>
+              </div>
+              
+              <div class="feature-card">
+                  <h3>Zero-Trust Security</h3>
+                  <p>Implement world-class security protocols, including continuous monitoring and end-to-end encryption to protect your intellectual property and user data.</p>
+              </div>
+              
+              <div class="feature-card">
+                  <h3>Rapid Deployment</h3>
+                  <p>Go from concept to production in minutes, not weeks. Our streamlined deployment pipeline minimizes friction and time-to-market.</p>
+              </div>
+          </div>
+      </section>
+      
+      <section id="team" class="page-section">
+          <h2>Meet Our Leadership Team</h2>
+          <p style="text-align: center; color: var(--color-text-medium); max-width: 800px; margin: 0 auto 3rem auto;">
+              Our team is composed of industry veterans and forward-thinking innovators dedicated to achieving excellence in every project.
+          </p>
+          
+          <div class="team-grid">
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=S" alt="Photo of Sanjith" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=S';">
+                  <h3>Sanjith</h3>
+                  <p class="title">Chief Executive Officer (CEO)</p>
+                  <p class="bio">Defines the company's strategic direction and drives innovation in new markets, with a focus on sustainable growth.</p>
+              </div>
+              
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=V" alt="Photo of Venkatesh" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=V';">
+                  <h3>Venkatesh</h3>
+                  <p class="title">Chief Product Officer (CPO)</p>
+                  <p class="bio">Leads product development, design, and market fit across all core platform features to ensure user success.</p>
+              </div>
+              
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=A" alt="Photo of Aakash Raj" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=A';">
+                  <h3>Aakash Raj</h3>
+                  <p class="title">Chief Technology Officer (CTO)</p>
+                  <p class="bio">Oversees all engineering efforts, system architecture, and technology roadmap, ensuring technical excellence.</p>
+              </div>
 
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=B" alt="Photo of Abishek" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=B';">
+                  <h3>Abishek</h3>
+                  <p class="title">VP of Engineering</p>
+                  <p class="bio">Manages development teams, focusing on code quality, deployment efficiency, and scaling infrastructure globally.</p>
+              </div>
+              
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=R" alt="Photo of Varun" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=R';">
+                  <h3>Varun</h3>
+                  <p class="title">Head of Global Sales</p>
+                  <p class="bio">Responsible for worldwide revenue generation and building strategic client partnerships across all territories.</p>
+              </div>
+              
+              <div class="team-member">
+                  <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=H" alt="Photo of Shajinesh" onerror="this.onerror=null;this.src='https://placehold.co/120x120/E0E7FF/4F46E5?text=H';">
+                  <h3>Shajinesh</h3>
+                  <p class="title">Director of Data Science</p>
+                  <p class="bio">Specializes in developing cutting-edge AI models for real-time insights and advanced data analytics offerings.</p>
+              </div>
+          </div>
+      </section>
 
-                <div class="service-card">
-                    <h3>Custom Software Solutions</h3>
-                    <p>Building bespoke applications designed specifically to solve your unique business challenges, from mobile to enterprise scale.</p>
-                </div>
-                <div class="service-card">
-                    <h3>UX/UI & Product Design</h3>
-                    <p>Crafting intuitive and engaging user experiences based on deep user research and modern design principles.</p>
-                </div>
-            </div>
-        </section>
+      <section id="contact" class="page-section">
+          <h2>Let's Build the Future Together</h2>
+          <div class="contact-content">
+              <p style="text-align: center; color: var(--color-text-medium); margin-bottom: 2rem;">
+                  We are ready to discuss your project. Send us a detailed message and we'll reply within one business day.
+              </p>
+              <form id="contact-form">
+                  <div class="form-group">
+                      <label for="name">Full Name</label>
+                      <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Work Email</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Your Project Details / Inquiry</label>
+                      <textarea id="message" name="message" rows="6" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                      Submit Inquiry
+                  </button>
+              </form>
+              <p id="form-status"></p>
+          </div>
+      </section>
 
-        <!-- features section-->
-        <section id="features" class="page-section">
-            <h2>Core Platform Features</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Cloud Scalability</h3>
-                    <p>Built on resilient cloud architecture designed to handle massive traffic spikes and data loads without breaking a sweat. Automatic scaling is standard.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Real-time AI Insights</h3>
-                    <p>Integrate our proprietary AI engine to generate actionable insights from your data, predicting trends and optimizing performance instantly.</p>
-                </div>
-                
+  </main>
+  <footer>
+      <div class="container">
+          <p>&copy; 2024 StartupX. All rights reserved. | <span style="color: var(--color-primary); font-weight: 600;">Innovate. Scale. Succeed.</span></p>
+      </div>
+  </footer>
 
-                <div class="feature-card">
-                    <h3>Zero-Trust Security</h3>
-                    <p>Implement world-class security protocols, including continuous monitoring and end-to-end encryption to protect your intellectual property and user data.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>Rapid Deployment</h3>
-                    <p>Go from concept to production in minutes, not weeks. Our streamlined deployment pipeline minimizes friction and time-to-market.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Team namse -->
-        <section id="team" class="page-section">
-            <h2>Meet Our Leadership Team</h2>
-            <p style="text-align: center; color: var(--color-text-medium); max-width: 800px; margin: 0 auto 3rem auto;">
-                Our team is composed of industry veterans and forward-thinking innovators dedicated to achieving excellence in every project.
-            </p>
-            
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=S" alt="Photo of Sanjith">
-                    <h3>Sanjith</h3>
-                    <p class="title">Chief Executive Officer (CEO)</p>
-                    <p class="bio">Defines the company's strategic direction and drives innovation in new markets, with a focus on sustainable growth.</p>
-                </div>
-                
-                <!-- Team Member 2: Venkatesh -->
-                <div class="team-member">
-                    <!-- Placeholder image URL: 120x120 light grey square with 'V' text -->
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=V" alt="Photo oVenkatesh">
-                    <h3>Venkatesh</h3>
-                    <p class="title">Chief Product Officer (CPO)</p>
-                    <p class="bio">Leads product development, design, and market fit across all core platform features to ensure user success.</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=A" alt="Phot of Aakash Raj">
-                    <h3>Aakash Raj</h3>
-                    <p class="title">Chief Technology Officer (CTO)</p>
-                    <p class="bio">Oversees all engineering efforts, system architecture, and technology roadmap, ensuring technical excellence.</p>
-                </div>
-
-
-                <div class="team-member">
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=B" alt="Photoof  Abishek">
-                    <h3>Abishek</h3>
-                    <p class="title">VP of Engineering</p>
-                    <p class="bio">Manages development teams, focusing on code quality, deployment efficiency, and scaling infrastructure globally.</p>
-                </div>
-
-                <div class="team-member">
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=R" alt="Photo oVarun">
-                    <h3>Varun</h3>
-                    <p class="title">Head of Global Sales</p>
-                    <p class="bio">Responsible for worldwide revenue generation and building strategic client partnerships across all territories.</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://placehold.co/120x120/E0E7FF/4F46E5?text=H" alt="Photo of Shajinesh">
-                    <h3>Shajinesh</h3>
-                    <p class="title">Director of Data Science</p>
-                    <p class="bio">Specializes in developing cutting-edge AI models for real-time insights and advanced data analytics offerings.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. contact us section -->
-        <section id="contact" class="page-section">
-            <h2>Let's Build the Future Together</h2>
-            <div class="contact-content">
-                <p style="text-align: center; color: var(--color-text-medium); margin-bottom: 2rem;">
-                    We are ready to discuss your project. Send us a detailed message and we'll reply within one business day.
-                </p>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Work Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Project Details / Inquiry</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        Submit Inquiry
-                    </button>
-                </form>
-                <p id="form-status"></p>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 StartupX. All rights reserved. | <span style="color: var(--color-primary); font-weight: 600;">Innovate. Scale. Succeed.</span></p>
-        </div>
-    </footer>
   <button id="toTop" title="Back to top">↑</button>
   <script src="main.js"></script>
 </body>
 </html>
+
